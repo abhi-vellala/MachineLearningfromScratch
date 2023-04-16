@@ -12,7 +12,7 @@ Kmeans clustering is performed using **Within Cluster Sum of Squares(WCSS)**. In
     1. $For: j~ in~ k:$
         1. $C_{j}=mean(X)$
         2. $dist_{j}=||X-C_{j}||_{2}$
-    2. $K=\argmin_{j}(dist_{j})$
+    2. $K=argmin_{j}(dist_{j})$
     3. $WCSS_{i}=\sum_{j}||X-C_{j}||_{2}$
     4. $if~ abs(WCSS_{i}-WCSS_{i-1}) \leq convergence:$
         1. $break$
