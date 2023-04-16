@@ -92,7 +92,7 @@ np.random.uniform(low=-100, high=100,size=(10000,2))
 ```
 </td>
 <td><img src="images/Figure_210k.png" width = 560px height = 140px ></td>
-<td><img src="images/Figure_210k.png" width = 560px height = 140px ></td>
+<td><img src="images/Figure_110k.png" width = 560px height = 140px ></td>
 </tr>
 <td>
 </td>
