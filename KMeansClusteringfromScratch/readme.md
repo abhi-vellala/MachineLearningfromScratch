@@ -51,7 +51,53 @@ plt.show()
 
 ## Results
 
-Here are some results:
+Here are some results: </br> </br>
+
+<table>
+<tr>
+<td> Data </td> <td>  Clusters </td> <td>  Convergence </td>
+</tr>
+<tr>
+<td>
+
+```python
+k = 3
+np.random.uniform(low=-100, high=100,size=(1000,2)) 
+```
+</td>
+<td><img src="images/Figure_21000.png" width = 560px height = 140px ></td>
+<td><img src="images/Figure_11000.png" width = 560px height = 140px ></td>
+</tr>
+<tr>
+<td>
+
+```python
+k = 3
+X1 = np.random.uniform(low=1, high=5, size=(1000,2))  
+X2 = np.random.uniform(low=10, high=15, size=(1000,2)) 
+X3 = np.random.uniform(low=20, high=25, size=(1000,2)) 
+X = np.concatenate((X1, X2, X3))  
+X = np.random.shuffle(X)
+```
+
+</td>
+<td><img src="images/Figure_29k.png" width = 560px height = 140px ></td>
+<td><img src="images/Figure_19k.png" width = 560px height = 140px ></td>
+<tr>
+<td>
+
+```python
+k = 10
+np.random.uniform(low=-100, high=100,size=(10000,2)) 
+```
+</td>
+<td><img src="images/Figure_210k.png" width = 560px height = 140px ></td>
+<td><img src="images/Figure_210k.png" width = 560px height = 140px ></td>
+</tr>
+<td>
+</td>
+</tr>
+</table>
 
 
 

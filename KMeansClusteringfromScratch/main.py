@@ -3,15 +3,15 @@ import matplotlib.pyplot as plt
 import numpy as np
 np.random.seed(123456789)
 
-# X1 = np.random.uniform(low=1, high=5, size=(1000,2))
-# X2 = np.random.uniform(low=10, high=15, size=(1000,2))
-# X3 = np.random.uniform(low=20, high=25, size=(1000,2))
+# X1 = np.random.uniform(low=1, high=5, size=(3000,2))
+# X2 = np.random.uniform(low=10, high=15, size=(3000,2))
+# X3 = np.random.uniform(low=20, high=25, size=(3000,2))
 # X = np.concatenate((X1, X2, X3))
 # np.random.shuffle(X)
-X = np.random.uniform(low=-100, high=100, size=(1000,2))
+X = np.random.uniform(low=-100, high=100, size=(10000,2))
 print(f"Shape of data: {X.shape}")
-k = 4
-kmeans = KMeansClustering(X,3)
+k = 10
+kmeans = KMeansClustering(X,k)
 clusters = kmeans.kmeans(convergence=1e-10)
 print("Clusters:")
 print(clusters)
