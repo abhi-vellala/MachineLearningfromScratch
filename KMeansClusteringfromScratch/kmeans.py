@@ -61,7 +61,7 @@ class KMeansClustering:
             wcss += np.sum(np.square(data - centroid)) # calculate cluster sum and add it to total sum of WCSS
         return wcss
 
-    def kmeans(self, convergence=0.0001, no_iterations=100):
+    def kmeans(self, convergence=0.0001, no_iterations=100, explain=False):
         """
         Performs Kmeans clustering algorithm. 
         input: 
@@ -80,6 +80,7 @@ class KMeansClustering:
         distances = np.empty(shape=(len(X),k)) # initializing a distance array to save distance between centroids to each data. Shape: (nrows(X) x k)
         iter = 0
         self.wcss = []
+        self.all_custers = []
         # while current iteration is less than the number of iteration given in the input
         while iter < no_iterations:
             # for each cluster calculate centroid and euclidean distance between each data point to the cluster centroid    
@@ -96,6 +97,8 @@ class KMeansClustering:
             self.wcss.append(curr_wcss)
 
             print(f"{iter}: {curr_wcss}")
+            if explain:
+                self.all_custers.append(clusters)
             # if the difference between wcss value of previous iteration and current iteration is less than convergence given in input,
             # we achieved convergence point and local minima. The while loop breaks and continues to return the output.
             if iter >= 1 and abs(self.wcss[iter] - self.wcss[iter-1]) < convergence:
