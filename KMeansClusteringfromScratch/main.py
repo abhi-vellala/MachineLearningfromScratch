@@ -3,16 +3,16 @@ import matplotlib.pyplot as plt
 import numpy as np
 np.random.seed(123456789)
 
-X11 = np.random.uniform(low=1, high=5, size=(300,1))
-X22 = np.random.uniform(low=10, high=15, size=(300,1))
-X1 = np.concatenate([X11,X22], axis=1)
+X1 = np.random.normal(loc=10, scale=5, size=(300,2))
+# X22 = np.random.normal(loc=4, scale=2, size=(300,1))
+# X1 = np.concatenate([X11,X22], axis=1)
 
 
-X2 = np.random.uniform(low=3, high=8, size=(300,2))
+X2 = np.random.normal(loc=40, scale=5, size=(300,2))
 
-X31 = np.random.uniform(low=7, high=12, size=(300,1))
-X32 = np.random.uniform(low=9, high=15, size=(300,1))
-X3 = np.concatenate([X31,X32], axis=1)
+X3 = np.random.normal(loc=20, scale=5, size=(300,2))
+# X32 = np.random.uniform(low=9, high=15, size=(300,1))
+# X3 = np.concatenate([X31,X32], axis=1)
 
 X = np.concatenate((X1, X2, X3))
 np.random.shuffle(X)
